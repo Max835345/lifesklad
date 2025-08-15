@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лайф-склад - аренда складских ячеек</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <div class="logo-text">ЛАЙФ-<span>СКЛАД</span></div>
+                </div>
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="#boxes">Размеры боксов</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#benefits">Преимущества</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Мобильное меню -->
+        <div class="mobile-nav">
+            <ul>
+                <li><a href="#boxes">Размеры боксов</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#benefits">Преимущества</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="overlay"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Надежное хранение ваших вещей</h1>
+                <p>Безопасные складские ячейки в морских контейнерах для личных и коммерческих нужд</p>
+                <a href="#boxes" class="cta-button">Выбрать бокс</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Box Sizes Section -->
+    <section id="boxes" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Выберите размер бокса</h2>
+            </div>
+            <div class="boxes-container">
+                <!-- Box 1 -->
+                <div class="box-card">
+                    <div class="box-header">
+                        <div class="box-size">БОКС XS</div>
+                        <div class="box-area">3 м²</div>
+                    </div>
+                    <div class="box-content">
+                        <div class="box-description">
+                            Малый бокс для хранения мелкогабаритных вещей. В нем можно хранить сезонную резину, документацию, разборную мебель, коляски и зимний инвентарь.
+                        </div>
+                        <div class="box-price">от 2 900 руб./месяц</div>
+                        <ul class="box-features">
+                            <li><i class="fas fa-check"></i> Высота 2.7 м</li>
+                            <li><i class="fas fa-check"></i> Климат-контроль</li>
+                            <li><i class="fas fa-check"></i> Круглосуточный доступ</li>
+                        </ul>
+                        <a href="#" class="order-button">Арендовать</a>
+                    </div>
+                </div>
+
+                <!-- Box 2 -->
+                <div class="box-card">
+                    <div class="box-header">
+                        <div class="box-size">БОКС XS</div>
+                        <div class="box-area">3.5 м²</div>
+                    </div>
+                    <div class="box-content">
+                        <div class="box-description">
+                            Идеально подойдет для надежного хранения стройматериалов, инструментов, автозапчастей, бытовой техники и оборудования.
+                        </div>
+                        <div class="box-price">от 3 500 руб./месяц</div>
+                        <ul class="box-features">
+                            <li><i class="fas fa-check"></i> Высота 2.7 м</li>
+                            <li><i class="fas fa-check"></i> Климат-контроль</li>
+                            <li><i class="fas fa-check"></i> Круглосуточный доступ</li>
+                        </ul>
+                        <a href="#" class="order-button">Арендовать</a>
+                    </div>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="box-card">
+                    <div class="box-header">
+                        <div class="box-size">БОКС M</div>
+                        <div class="box-area">6 м²</div>
+                    </div>
+                    <div class="box-content">
+                        <div class="box-description">
+                            Идеально для хранения вещей однокомнатной квартиры или студии во время ремонта. Поместятся коробки, спортинвентарь, архивы.
+                        </div>
+                        <div class="box-price">от 5 900 руб./месяц</div>
+                        <ul class="box-features">
+                            <li><i class="fas fa-check"></i> Высота 2.7 м</li>
+                            <li><i class="fas fa-check"></i> Климат-контроль</li>
+                            <li><i class="fas fa-check"></i> Круглосуточный доступ</li>
+                        </ul>
+                        <a href="#" class="order-button">Арендовать</a>
+                    </div>
+                </div>
+
+                <!-- Box 4 -->
+                <div class="box-card">
+                    <div class="box-header">
+                        <div class="box-size">БОКС L</div>
+                        <div class="box-area">9 м²</div>
+                    </div>
+                    <div class="box-content">
+                        <div class="box-description">
+                            Для хранения вещей большого дома или офиса. Вместит крупногабаритную мебель, технику, товарные запасы для бизнеса.
+                        </div>
+                        <div class="box-price">от 7 900 руб./месяц</div>
+                        <ul class="box-features">
+                            <li><i class="fas fa-check"></i> Высота 2.7 м</li>
+                            <li><i class="fas fa-check"></i> Климат-контроль</li>
+                            <li><i class="fas fa-check"></i> Круглосуточный доступ</li>
+                        </ul>
+                        <a href="#" class="order-button">Арендовать</a>
+                    </div>
+                </div>
+
+                <!-- Box 5 -->
+                <div class="box-card">
+                    <div class="box-header">
+                        <div class="box-size">БОКС XL</div>
+                        <div class="box-area">15 м²</div>
+                    </div>
+                    <div class="box-content">
+                        <div class="box-description">
+                            Самый большой бокс для хранения большого количества вещей при переезде или для бизнеса. Подойдет для хранения мебели целой квартиры.
+                        </div>
+                        <div class="box-price">от 8 900 руб./месяц</div>
+                        <ul class="box-features">
+                            <li><i class="fas fa-check"></i> Высота 2.7 м</li>
+                            <li><i class="fas fa-check"></i> Климат-контроль</li>
+                            <li><i class="fas fa-check"></i> Круглосуточный доступ</li>
+                        </ul>
+                        <a href="#" class="order-button">Арендовать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <!-- <section id="about" class="section about">
+        <div class="container">
+            <div class="section-title">
+                <h2>О нашей компании</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Надежное хранение с 2010 года</h3>
+                    <p>Компания "Лайф-склад" предоставляет услуги по аренде складских ячеек внутри современных морских контейнеров уже более 10 лет. Мы создали уникальную систему хранения, которая сочетает в себе безопасность, доступность и комфорт.</p>
+                    <p>Наши складские комплексы расположены в портовых зонах с удобной транспортной развязкой, что обеспечивает легкий доступ для наших клиентов. Все контейнеры оборудованы системами климат-контроля, что гарантирует сохранность ваших вещей в любых условиях.</p>
+                    <p>Мы гордимся тем, что более 5000 клиентов доверили нам хранение своих личных и коммерческих вещей. Наша команда профессионалов всегда готова помочь вам подобрать оптимальное решение для ваших потребностей в хранении.</p>
+                </div>
+                <div class="about-image"></div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="section benefits">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наши преимущества</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-arrows-alt-v"></i>
+                    </div>
+                    <h3 class="benefit-title">Высокие контейнеры</h3>
+                    <p class="benefit-description">Наши контейнеры выше стандартных, что позволяет хранить высокие предметы: шкафы, холодильники и другую габаритную мебель.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <h3 class="benefit-title">Чистые боксы</h3>
+                    <p class="benefit-description">Все складские боксы перед сдачей тщательно убираются и дезинфицируются для вашего комфорта.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-umbrella"></i>
+                    </div>
+                    <h3 class="benefit-title">Влагозащищенность</h3>
+                    <p class="benefit-description">Наши контейнеры полностью защищены от влаги и сырости, что гарантирует сохранность ваших вещей.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="benefit-title">Освещение внутри</h3>
+                    <p class="benefit-description">Каждый контейнер оборудован качественным освещением для удобного доступа к вещам в любое время суток.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="benefit-title" style="font-size: 18px;">Клиентоориентированность</h3>
+                    <p class="benefit-description">Максимальное внимание к потребностям клиента и индивидуальный подход к каждому.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3 class="benefit-title">Осмотр в любое время</h3>
+                    <p class="benefit-description">Возможность осмотра бокса и оформления аренды в удобное для вас время, даже в выходные.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3 class="benefit-title">Экономия до 40%</h3>
+                    <p class="benefit-description">Наши цены на 40% ниже, чем на обычных складах, при сохранении всех преимуществ.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3 class="benefit-title">Отличная доступность</h3>
+                    <p class="benefit-description">Удобное расположение по пути домой или на дачу с отличной транспортной доступностью.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-truck-loading"></i>
+                    </div>
+                    <h3 class="benefit-title">Удобная погрузка</h3>
+                    <p class="benefit-description">Просторные проезды и удобные погрузочные площадки для комфортной загрузки ваших вещей.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-unlock"></i>
+                    </div>
+                    <h3 class="benefit-title">Доступ 24/7</h3>
+                    <p class="benefit-description">Круглосуточный доступ к вашим вещам 7 дней в неделю без ограничений по времени.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: #fff;">Контакты</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Свяжитесь с нами</h3>
+                    <p>Мы готовы ответить на все ваши вопросы и помочь подобрать оптимальный вариант хранения.</p>
+                    
+                    <ul class="contact-details">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>г. Санкт-Петербург, Выборгское шоссе 200А</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+7 (921) 877-76-47</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@life-sklad.ru</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Ежедневно с 8:00 до 22:00</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-form">
+                    <h3>Оставить заявку</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Имя</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <div class="logo-text">ЛАЙФ-<span>СКЛАД</span></div>
+                </div>
+                <div class="copyright">
+                    © 2023 Лайф-склад. Все права защищены.
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Бургер-меню
+        const burgerMenu = document.querySelector('.burger-menu');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const overlay = document.querySelector('.overlay');
+        
+        burgerMenu.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        });
+        
+        overlay.addEventListener('click', function() {
+            burgerMenu.classList.remove('active');
+            mobileNav.classList.remove('active');
+            this.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+        });
+        
+        // Закрытие меню при клике на пункт
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                burgerMenu.classList.remove('active');
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            });
+        });
+
+        // Плавная прокрутка к якорям
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Подсветка активного пункта меню при прокрутке
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a, .mobile-nav a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if(pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Обработка формы
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо за вашу заявку! Мы свяжемся с вами в ближайшее время.');
+            form.reset();
+        });
+    </script>
+</body>
+</html>
