@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лайф-склад - аренда складских ячеек</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=9ce112ee-4530-42ba-92e5-3b656d23567b&lang=ru_RU" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container hh">
+            <div class="header-content">
+                <div class="logo n">
+                    <div style=" background: #fff; border-radius: 50%; padding: 20px 35px 20px 35px;" class="logo-icon">
+                        <img style="width: 100px; height: 100px;" src="IMG_7092.PNG" alt="">
+                    </div>
+                </div>
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="#boxes">Размеры боксов</a></li>
+                        <li><a href="#transport">Транспортная доступность</a></li>
+                        <li><a href="#benefits">Преимущества</a></li>
+                        <li><a href="#security">Безопасность</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                        <li><a href="tel:+79218777647">+7 (921) 877-76-47</a></li>
+                    </ul>
+                </nav>
+                <div class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!-- Мобильное меню -->
+        <div class="mobile-nav">
+            <div class="logo">
+                <div style=" background: #fff; border-radius: 50%; padding: 20px 35px 20px 35px;" class="logo-icon">
+                    <img style="width: 120px; height: 120px;" src="IMG_7092.PNG" alt="">
+                </div>
+            </div>
+            <ul>
+                <li><a href="#boxes">Размеры боксов</a></li>
+                <li><a href="#transport">Транспортная доступность</a></li>
+                <li><a href="#benefits">Преимущества</a></li>
+                <li><a href="#security">Безопасность</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <li><a href="tel:+79218777647">+7 (921) 877-76-47</a></li>
+            </ul>
+        </div>
+        <div class="overlay"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <p>Выборгское шоссе 200А</p>
+                <h1>Осмотр и заселение в любое время</h1>
+                <p>Оставьте заявку или позвоните нам прямо сейчас и запишитесь на осмотр в удобное вам время</p>
+                <a href="#orderForm" class="cta-button">Записаться</a>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- SP -->
+    <section id="discount" class="discount-section" style="text-align: center; background: #62c0ff; color: #fff; padding: 20px 20px 20px 20px;">
+        <div class="container">
+            <div class="discount-content">
+                <h2 style="font-size: 40px;">Специальное предложение</h2>
+                <p style="padding-top: 20px; padding-bottom: 20px; font-size: 30px; font-weight: bold;">Оставьте заявку прямо сейчас и забронируйте за собой скидку <p style="font-size: 70px; font-weight: bolder;">50%</p> <p style="font-size: 30px; font-weight: bold;">на первый месяц аренды!</p>
+                <a class="discount-button" id="openDiscountModal">Забронировать скидку</a>
+            </div>
+        </div>
+    </section> 
+    <!-- Модальное окно скидки -->
+    <div id="discountModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <form id="discountForm">
+                    <div class="form-group">
+                        <label for="discountName"> Ваше имя</label>
+                        <input type="text" id="discountName" name="Имя" required placeholder="Введите ваше полное имя">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="discountPhone">Ваш телефон</label>
+                        <div class="phone-input-container">
+                            <span class="phone-prefix">+7</span>
+                            <input type="tel" id="discountPhone" name="Телефон" required placeholder="(___) ___-__-__" maxlength="18">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="baton" >Забронировать скидку</button>
+                </form> 
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Box Sizes Section -->
+    <section id="boxes" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Выберите размер бокса</h2>
+            </div>
+            <div class="boxes-container">
+                <!-- Box 1 -->
+                <div class="box-card">
+                    <div class="box-header">
+                        <img style="width: 300px;  height: 203px;" src="xs.png" alt="">
+                        <div class="box-size">БОКС XS</div>
+                        <div class="box-area">3 м²</div>
+                    </div>
+                    <div class="box-content">
+                        <ul class="box-storage b">
+                            <li>Спорт-инвентарь</li>
+                            <li>Коробки, чемоданы, коляски</li>
+                            <li>Автомобильные шины и зап. части</li>
+                            <li>Компактная мебель</li>
+                            <li>Архив документов</li>
+                            <li>Разобраная мебель</li>
+                            <li>Садовый инвентарь</li>
+                            <li>Всё, что хранится на балконе</li>  
+                        </ul>
+                        <div class="box-price">2 900 руб./месяц</div>
+                        <ul class="box-features">
+                            <li><i class="fas fa-check"></i> Длинна 2.3 м</li>
+                            <li><i class="fas fa-check"></i> Ширина 1.2 м</li>
+                            <li><i class="fas fa-check"></i> Высота 2.7 м</li>
+                            <li><i class="fas fa-check"></i> Круглосуточный доступ</li>
+                        </ul>
+                        <a href="#orderForm" class="order-button">Арендовать</a>
+                    </div>
+                </div>
+
+                <!-- Box 2 -->
+                <div class="box-card">
+                    <div class="box-header">
+                        <img style="width: 250px; height: 205px;" src="s.png" alt="">
+                        <div class="box-size">БОКС S</div>
+                        <div class="box-area">3.5 м²</div>
+                    </div>
+                    <div class="box-content">
+                        <ul class="box-storage b">
+                            <li>Спорт-инвентарь</li>
+                            <li>Коробки, чемоданы, коляски</li>
+                            <li>Автомобильные шины и зап. части</li>
+                            <li>Компактная мебель</li>
+                            <li>Архив документов</li>
+                            <li>Разобраная мебель</li>
+                            <li>Садовый инвентарь</li>
+                            <li>Всё, что хранится на балконе</li>  
+                        </ul>
+                        <div class="box-price">3 500 руб./месяц</div>
+                        <ul class="box-features">
+                            <li><i class="fas fa-check"></i> Длинна 2.3 м</li>
+                            <li><i class="fas fa-check"></i> Ширина 1.5 м</li>
+                            <li><i class="fas fa-check"></i> Высота 2.7 м</li>
+                            <li><i class="fas fa-check"></i> Круглосуточный доступ</li>
+                        </ul>
+                        <a href="#orderForm" class="order-button">Арендовать</a>
+                    </div>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="box-card">
+                    <div class="box-header">
+                        <img style="width: 250px; height: 207px;" src="m.png" alt="">
+                        <div class="box-size">БОКС M</div>
+                        <div class="box-area">6 м²</div>
+                    </div>
+                    <div class="box-content">
+                        <ul class="box-storage bot">
+                            <li>Переезд квартиры-студии</li>
+                            <li>Мебель и бытовая техника</li>
+                            <li>Хранение на время ремонта</li>
+                            <li>Стройматериалы и интрументы</li>
+                            <li>Автозапчасти</li>
+                            <li>Прочный антивандальный запорный механизм</li>  
+                        </ul>
+                        <div class="box-price">5 900 руб./месяц</div>
+                        <ul class="box-features">
+                            <li><i class="fas fa-check"></i> Длинна 2.3 м</li>
+                            <li><i class="fas fa-check"></i> Ширина 2.4 м</li>
+                            <li><i class="fas fa-check"></i> Высота 2.7 м</li>
+                            <li><i class="fas fa-check"></i> Круглосуточный доступ</li>
+                        </ul>
+                        <a href="#orderForm" class="order-button">Арендовать</a>
+                    </div>
+                </div>
+
+                <!-- Box 4 -->
+                <div class="box-card">
+                    <div class="box-header">
+                        <img style="width: 250px; height: 203px;" src="l.png" alt="">
+                        <div class="box-size">БОКС L</div>
+                        <div class="box-area">9 м²</div>
+                    </div>
+                    <div class="box-content">
+                        <ul class="box-storage bot2">
+                            <li>Переезд 1-комнатной квартирый</li>
+                            <li>Мебель и бытовая техника</li>
+                            <li>Товары интернет-магазина</li>
+                            <li>Прочный антивандальный запорный механизм</li>  
+                        </ul>
+                        <div class="box-price">7 900 руб./месяц</div>
+                        <ul class="box-features">
+                            <li><i class="fas fa-check"></i> Длинна 2.3 м</li>
+                            <li><i class="fas fa-check"></i> Ширина 3.6 м</li>
+                            <li><i class="fas fa-check"></i> Высота 2.7 м</li>
+                            <li><i class="fas fa-check"></i> Круглосуточный доступ</li>
+                        </ul>
+                        <a href="#orderForm" class="order-button">Арендовать</a>
+                    </div>
+                </div>
+
+                <!-- Box 5 -->
+                <div class="box-card">
+                    <div class="box-header">
+                        <img style="width: 250px;" src="xl.png" alt="">
+                        <div class="box-size">БОКС XL</div>
+                        <div class="box-area">15 м²</div>
+                    </div>
+                    <div class="box-content">
+                        <ul class="box-storage b">
+                            <li>Полноценный переезд 2-х комнатной квартиры</li>
+                            <li>Товары маркетплейсов и склад для бизнеса</li>
+                            <li>Переезд производства</li>
+                            <li>Переезд офиса</li>
+                            <li>Хранение оборудования для продажи при закрытии бизнеса</li>
+                            <li>По размеру напоминает гараж стандартного размера, но с высоким и ровным потолком</li>
+                            <li>Прочный антивандальный запорный механизм</li>  
+                        </ul>
+                        <div class="box-price">8 900 руб./месяц</div>
+                        <ul class="box-features">
+                            <li><i class="fas fa-check"></i> Длинна 2.3 м</li>
+                            <li><i class="fas fa-check"></i> Ширина 6.0 м</li>
+                            <li><i class="fas fa-check"></i> Высота 2.7 м</li>
+                            <li><i class="fas fa-check"></i> Круглосуточный доступ</li>
+                        </ul>
+                        <a href="#orderForm" class="order-button">Арендовать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discount Table Section -->
+    <section class="discount-table-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Скидки при долгосрочной аренде</h2>
+            </div>
+            <div class="discount-table-container">
+                <table class="discount-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>1 месяц</th>
+                            <th>3 месяца</th>
+                            <th>6 месяцев</th>
+                            <th>12 месяцев</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="size-header">3 метра</td>
+                            <td>2900 руб./мес</td>
+                            <td>
+                                2 недели в подарок!<br>
+                                <span class="savings">экономия 1450 руб.</span>
+                            </td>
+                            <td>
+                                1 месяц в подарок!<br>
+                                <span class="savings">экономия 2960 руб.</span>
+                            </td>
+                            <td>
+                                2 месяца в подарок!<br>
+                                <span class="savings">экономия 5800 руб.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="size-header">3.5 метра</td>
+                            <td>3500 руб./мес</td>
+                            <td>
+                                2 недели в подарок!<br>
+                                <span class="savings">экономия 1750 руб.</span>
+                            </td>
+                            <td>
+                                1 месяц в подарок!<br>
+                                <span class="savings">экономия 3500 руб.</span>
+                            </td>
+                            <td>
+                                2 месяца в подарок!<br>
+                                <span class="savings">экономия 7000 руб.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="size-header">6 метров</td>
+                            <td>5900 руб./мес</td>
+                            <td>
+                                2 недели в подарок!<br>
+                                <span class="savings">экономия 2950 руб.</span>
+                            </td>
+                            <td>
+                                1 месяц в подарок!<br>
+                                <span class="savings">экономия 5900 руб.</span>
+                            </td>
+                            <td>
+                                2 месяца в подарок!<br>
+                                <span class="savings">экономия 11800 руб.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="size-header">9 метров</td>
+                            <td>7900 руб./мес</td>
+                            <td>
+                                2 недели в подарок!<br>
+                                <span class="savings">экономия 3950 руб.</span>
+                            </td>
+                            <td>
+                                1 месяц в подарок!<br>
+                                <span class="savings">экономия 7900 руб.</span>
+                            </td>
+                            <td>
+                                2 месяца в подарок!<br>
+                                <span class="savings">экономия 15800 руб.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="size-header">15 метров</td>
+                            <td>8900 руб./мес</td>
+                            <td>
+                                2 недели в подарок!<br>
+                                <span class="savings">экономия 4450 руб.</span>
+                            </td>
+                            <td>
+                                1 месяц в подарок!<br>
+                                <span class="savings">экономия 8900 руб.</span>
+                            </td>
+                            <td>
+                                2 месяца в подарок!<br>
+                                <span class="savings">экономия 17800 руб.</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="discount-cta">
+                <p style="font-size: 18px; margin-bottom: 20px;">Не упустите возможность сэкономить при долгосрочной аренде!</p>
+                <a href="#contact" class="cta-button">Арендовать со скидкой</a>
+            </div>
+        </div>
+    </section>
+
+<!-- Transport -->
+    <section id="transport" class="transport-section">
+        <div class="container">
+          <h2 class="section-title">Транспортная доступность</h2>
+          <div class="transport-card">
+            <h3>Мы находимся в уникальной локации с отличной транспортной доступностью</h3>
+            <p class="subtitle">
+              От нас можно удобно и быстро выехать в любую сторону и соответственно удобно приехать к нам с любой стороны
+            </p>
+      
+            <ul class="transport-list">
+              <li><i class="fas fa-bus"></i> 5 минут на машине от метро Озерки</li>
+              <li><i class="fas fa-subway"></i> 5 минут от метро Проспект Просвещения</li>
+              <li><i class="fas fa-road"></i> 7 минут до Парнаса (по широкополосному Суздальскому проспекту или по Заречной улице)</li>
+              <li><i class="fas fa-map-marker-alt"></i> 10 минут до Приморского района по дороге на Каменку или 15 минут через проспект Энгельса и Вербную улицу</li>
+              <li><i class="fas fa-car"></i> Выезд из Парголово за город к Осиновой роще</li>
+              <li><i class="fas fa-exchange-alt"></i> Рядом выезд на КАД в обе стороны</li>
+            </ul>
+          </div>
+      
+          <div class="map-block">
+            <div id="map"></div>
+            <video width="90%" style="border-radius: 10px;" controls="controls" src="roud.mp4"></video>
+          </div>
+        </div>
+      </section>
+
+    <div class="section-title">
+        <h2>План - схема контейнерной площадки</h2>
+    </div>
+    <div class="map-block">
+        <img style="width: 700px;" src="схема.jpg" alt="Как пройти">
+      </div>
+      
+ <!-- Security Section -->
+      <section id="security" class="section security">
+        <div class="container">
+            <div class="section-title">
+                <h2>Безопасность</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="benefit-title">Охраняемая территория</h3>
+                    <p class="benefit-description">КПП на въезде с охраной 24 часа</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="benefit-title">Видеонаблюдение</h3>
+                    <p class="benefit-description">Система видеонаблюдения с записью и хранением данных в течение 30 дней</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fa fa-person-running"></i>
+                    </div>
+                    <h3 class="benefit-title">Освещение по периметру</h3>
+                    <p class="benefit-description">С датчиками движения</p>
+                </div>
+            </div>
+        </div>
+    </section>
+      
+    
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="section benefits">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наши преимущества</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-arrows-alt-v"></i>
+                    </div>
+                    <h3 class="benefit-title">Высокие контейнеры</h3>
+                    <p class="benefit-description">Наши контейнеры выше стандартных, что позволяет хранить высокие предметы: шкафы, холодильники и другую габаритную мебель</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-unlock"></i>
+                    </div>
+                    <h3 class="benefit-title">Доступ 24/7</h3>
+                    <p class="benefit-description">Круглосуточный доступ к вашим вещам 7 дней в неделю без ограничений по времени</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3 class="benefit-title">Осмотр в любое время</h3>
+                    <p class="benefit-description">Возможность осмотра бокса и оформления аренды в удобное для вас время, даже в выходные</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-umbrella"></i>
+                    </div>
+                    <h3 class="benefit-title">Влагозащищенность</h3>
+                    <p class="benefit-description">Наши контейнеры полностью защищены от влаги и сырости, что гарантирует сохранность ваших вещей</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="benefit-title">Освещение внутри</h3>
+                    <p class="benefit-description">Каждый контейнер оборудован качественным освещением</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3 class="benefit-title">Экономия до 40%</h3>
+                    <p class="benefit-description">Наши цены на 40% ниже, чем на обычных складах, при сохранении всех преимуществ</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-truck-loading"></i>
+                    </div>
+                    <h3 class="benefit-title">Удобная разгрузка</h3>
+                    <p class="benefit-description">Просторные проезды и высота контейнеров для комфортной загрузки/разгрузки</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3 class="benefit-title">Отличная доступность</h3>
+                    <p class="benefit-description">Удобное расположение по пути домой или на дачу с отличной транспортной доступностью</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="benefit-title" style="font-size: 18px;">Клиентоориентированность</h3>
+                    <p class="benefit-description">Максимальное внимание к потребностям клиента и индивидуальный подход к каждому</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <section class="booking-section">
+            <div class="booking-header">
+                <h2>Забронировать бокс</h2>
+                <p>Закрепите за собой складское помещение прямо сейчас</p>
+            </div>
+            
+            <div class="booking-content">
+                <p class="booking-text">
+                    Забронируйте подходящий бокс для хранения ваших вещей. Мы бесплатно сохраним выбранный вариант до вашего визита в офис.
+                    Оставьте заявку, и наш менеджер свяжется с вами для подтверждения бронирования.
+                </p>
+                
+                <button class="booking-button" id="openBookingModal">Забронировать</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Модальное окно бронирования -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2 style="color: #fff;">Бронирование бокса</h2>
+            </div>
+            
+            <div class="modal-body">
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="bookingName">ФИО</label>
+                        <input type="text" id="bookingName" name="ФИО" required placeholder="Введите ваше полное имя">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bookingPhone">Телефон</label>
+                        <div class="phone-input-container">
+                            <span class="phone-prefix">+7</span>
+                            <input type="tel" id="bookingPhone" name="Телефон" required placeholder="(___) ___-__-__" maxlength="18">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Выберите размер бокса</label>
+                        <div class="box-options">
+                            <input type="radio" id="book-xs" name="boxSize" value="3 м" required>
+                            <label for="book-xs">3 м</label>
+                    
+                            <input type="radio" id="book-s" name="boxSize" value="3.5 м">
+                            <label for="book-s">3.5 м</label>
+                    
+                            <input type="radio" id="book-m" name="boxSize" value="6 м">
+                            <label for="book-m">6 м</label>
+                    
+                            <input type="radio" id="book-l" name="boxSize" value="9 м">
+                            <label for="book-l">9 м</label>
+                    
+                            <input type="radio" id="book-xl" name="boxSize" value="15 м">
+                            <label for="book-xl">15 м</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bookingDate">Желаемая дата заезда</label>
+                        <input type="date" id="bookingDate" name="Дата" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Подтвердить бронирование</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Contact Section -->
+    <div class="bggg">
+        <div class="container">
+            <section id="contact" class="section contact">
+                <div class="section-title">
+                    <h2 style="color: #fff;">Контакты</h2>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3 class="k">Свяжитесь с нами</h3>
+                        <p class="k" style="font-size: 18px; font-weight: bold; margin-bottom: 15px;">Оставьте заявку прямо сейчас и мы бесплатно забронируем за вами нужный склад</p>
+                        
+                        <ul class="contact-details">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>г. Санкт-Петербург, Выборгское шоссе 200А</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <span>+7 (921) 877-76-47</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>инфо@лайф-склад.рф</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Ежедневно с 8:00 до 22:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label for="name" style="color: #fff;">Имя</label>
+                            <input type="text" id="name" name="Имя" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" style="color: #fff;">Телефон</label>
+                            <div class="phone-input-container">
+                                <span class="phone-prefix">+7</span>
+                                <input type="tel" id="phone" name="Телефон" required placeholder="(___) ___-__-__" maxlength="18">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label style="color: #fff;">Выберите бокс</label>
+                            <div class="box-options">
+                                <input type="radio" id="box-xs" name="Бокс" value="3 м" required>
+                                <label for="box-xs">3 м</label>
+                        
+                                <input type="radio" id="box-s" name="Бокс" value="3.5 м">
+                                <label for="box-s">3.5 м</label>
+                        
+                                <input type="radio" id="box-m" name="Бокс" value="6 м">
+                                <label for="box-m">6 м</label>
+                        
+                                <input type="radio" id="box-l" name="Бокс" value="9 м">
+                                <label for="box-l">9 м</label>
+                        
+                                <input type="radio" id="box-xl" name="Бокс" value="15 м">
+                                <label for="box-xl">15 м</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-button">Забронировать</button>
+                    </form>                
+                </div>
+            </section>
+        </div>
+    </div>
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <div style=" background: #fff; border-radius: 50%; padding: 15px 35px 15px 35px;"class="logo-icon">
+                        <img style="width: 120px; height: 120px;" src="IMG_7092.PNG" alt="">
+                    </div>
+                </div>
+                <div class="copyright">© 2023 Лайф-склад. Все права защищены.</div>
+
+                <a href="#" id="privacyLink" style="color: #fff; text-decoration: none;">Политика конфиденциальности</a>
+                <!-- Замененный блок социальных сетей -->
+                <div class="social-links">
+                    <a href="https://vk.com/lifesklad" target="_blank">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                    <a href="https://www.avito.ru/brands/498a522d764994ea822e98045407e50b?src=search_seller_info&iid=7527240831" target="_blank">
+                        <i class="fas fa-store"></i>
+                    </a>
+                    <a href="https://rutube.ru/channel/67950423/" target="_blank">
+                        <i class="fas fa-play-circle"></i>
+                    </a>
+                    <a href="https://t.me/+79218777647" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/qr/KPLSJJ52UJQFO1?autoload=1&app_absent=0" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+                                
+            </div>
+        </div>
+    </footer>
+<script src="app.js"></script>
+</body>
+</html>
